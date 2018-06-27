@@ -13,6 +13,6 @@ get '/' do
 
 end
 
-
-
+get '/:id'
+  params[:id]
 end
