@@ -44,8 +44,9 @@ end
 
 get '/:id' do
   id = params[:id].to_i
+  @previous = id - 1
+  @next = id + 1
   @shirt = shirts[id]
-  "This is a #{@shirt[:title]}, tag size is #{@shirt[:size]}. The colour is #{@shirt[:colour]} and it's made from #{@shirt[:material]} "
   erb :'./photos/show'
 end
 
