@@ -31,23 +31,37 @@ shirts = [
 {
   id:3,
   title: "Large shirt",
-  size: "xs",
+  size: "L",
   colour: "Black",
   material:"Nylon"
+},
+{
+  id:3,
+  title: "Extra Large shirt",
+  size: "XL",
+  colour: "Black",
+  material:"Elastic"
 }
 ]
 
 
 get '/' do
+  id = params[:id].to_i
+  @id = id
+  @previous = id - 1
+  @next = id + 1
+  @shirt = shirts[id]
 erb :'./photos/index'
 end
 
 get '/:id' do
   id = params[:id].to_i
+  @id = id
   @previous = id - 1
   @next = id + 1
   @shirt = shirts[id]
   erb :'./photos/show'
+
 end
 
 end
