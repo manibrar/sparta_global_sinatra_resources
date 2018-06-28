@@ -9,17 +9,17 @@
 
 </nav>
 
-<h1 class="text-center jumbotron">Welcome to Mani's Many Shirts!</h1>
+<h1 style="background-color:<%=@shirt[:colour]%>;" class="text-center jumbotron">Welcome to Mani's Many Shirts!</h1>
 
   <div class="container text-center">
       <div class="panel">
-        <button type="button" class="btn-lg btn-default">
+        <button style="background-color:<%=@shirt[:colour]%>;" type="button" class="btn-lg btn-default">
           This is item <span class="badge badge-dark"><%=@id%></span>
         </button>
         <span><br></span>
         <h3>This is a(n) <%=@shirt[:title]%></h3>
         <h3>Tag size is <%=@shirt[:size]%></h3>
-        <h3>The colour of this shirt is <%=@shirt[:colour]%></h3>
+        <h3 style="color:<%=@shirt[:colour]%>;">The colour of this shirt is <%=@shirt[:colour]%></h3>
         <h3>This shirt is made from <%=@shirt[:material]%></h3>
       </div>
   </div>

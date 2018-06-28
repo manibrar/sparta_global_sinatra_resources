@@ -1,7 +1,6 @@
 class PhotosController < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
   set :views, Proc.new { File.join(root, "views")}
-
   configure :development do
   register Sinatra::Reloader
 end
@@ -11,35 +10,35 @@ shirts = [
   id:0,
   title: "Extra small shirt",
   size: "XS",
-  colour: "White",
+  colour: "Orange",
   material:"Plaid"
 },
 {
   id:1,
   title: "Small shirt",
   size: "S",
-  colour: "Blue",
+  colour: "lightblue",
   material:"Denim"
 },
 {
   id:2,
   title: "Medium shirt",
   size: "M",
-  colour: "Red",
+  colour: "pink",
   material:"Silk"
 },
 {
   id:3,
   title: "Large shirt",
   size: "L",
-  colour: "Black",
+  colour: "lightgrey",
   material:"Nylon"
 },
 {
   id:3,
   title: "Extra Large shirt",
   size: "XL",
-  colour: "Black",
+  colour: "purple",
   material:"Elastic"
 }
 ]
