@@ -50,6 +50,7 @@ get '/' do
   @previous = id - 1
   @next = id + 1
   @shirt = shirts[id]
+  @id_length = shirts.length
 erb :'./photos/index'
 end
 
@@ -59,6 +60,7 @@ get '/:id' do
   @previous = id - 1
   @next = id + 1
   @shirt = shirts[id]
+  @id_length = shirts.length
   erb :'./photos/show'
 
 end
